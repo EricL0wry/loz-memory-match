@@ -1,1 +1,64 @@
+body {
+  height: 97vh;
+  background-image: url(/assets/images/lfz-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 
+body * {
+  box-sizing: border-box;
+}
+
+aside {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+aside > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 12%;
+  width: 85%;
+  background-color: #87ceeb;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main > div {
+  height: 28%;
+  background-image: url(/assets/images/lfz-card.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#header {
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  height: 12%;
+}
+
+header > h1 {
+  margin: 0;
+}
+
+#gameboard {
+  height: 88%;
+}
