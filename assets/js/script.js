@@ -1,3 +1,26 @@
+document.addEventListener("DOMContentLoaded", initialStart);
+
+var cards = [
+  "css-logo",
+  "docker-logo",
+  "gitHub-logo",
+  "html-logo",
+  "js-logo",
+  "mysql-logo",
+  "node-logo",
+  "php-logo",
+  "react-logo",
+  "css-logo",
+  "docker-logo",
+  "gitHub-logo",
+  "html-logo",
+  "js-logo",
+  "mysql-logo",
+  "node-logo",
+  "php-logo",
+  "react-logo"
+];
+
 var firstCardClicked;
 var firstCardClasses;
 var secondCardClicked;
@@ -15,6 +38,49 @@ var modal = document.querySelector(".modal-overlay");
 var button = document.getElementById("reset-button");
 button.addEventListener("click", resetGame);
 
+function initialStart(){
+  for(var cardNum = 1; cardNum <= 18; cardNum++){
+    var card = document.createElement("div");
+    card.className = "col-2 card";
+
+    var cardFront = document.createElement("div");
+    cardFront.className = "card-front";
+
+    var cardBack = document.createElement("div");
+    cardBack.className = "card-back";
+
+    card.appendChild(cardFront);
+    card.appendChild(cardBack);
+    mainContainer.appendChild(card);
+  }
+  shuffleCardArray();
+  applyCardFronts();
+}
+
+function shuffleCardArray(){
+  var currentIndex = cards.length;
+  var tempValue, randomIndex;
+
+  while(0 !== currentIndex){
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    tempValue = cards[currentIndex];
+    cards[currentIndex] = cards[randomIndex];
+    cards[randomIndex] = tempValue;
+  }
+}
+
+function applyCardFronts(){
+  var deck = document.querySelectorAll(".card-front");
+  deck.forEach(function (card, index) {
+    card.className = "card-front " + cards[index];
+  })
+}
+
+{/* <div class="col-2 card">
+  <div class="card-front css-logo"></div>
+  <div class="card-back"></div>
+</div> */}
 
 function handleClick(event) {
   var cardClicked = event.target;
@@ -80,4 +146,6 @@ function resetCards(){
   for(var cardIndex = 0; cardIndex < hiddenCards.length; cardIndex++){
     hiddenCards[cardIndex].classList.remove("hidden");
   }
+  shuffleCardArray();
+  applyCardFronts();
 }
