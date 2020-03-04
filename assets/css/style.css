@@ -109,6 +109,32 @@ header > h1 {
   height: 88%;
 }
 
+.modal-overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal {
+  background-color: #87ceeb;
+  border-radius: 10px;
+  width: 33%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal > h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+}
+
 .hidden {
   display: none;
 }
