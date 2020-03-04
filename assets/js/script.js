@@ -12,6 +12,9 @@ mainContainer.addEventListener("click", handleClick);
 
 var modal = document.querySelector(".modal-overlay");
 
+var button = document.getElementById("reset-button");
+button.addEventListener("click", resetGame);
+
 
 function handleClick(event) {
   var cardClicked = event.target;
@@ -57,5 +60,24 @@ function displayStats(){
 }
 
 function calculateAccuracy(attempts, matches){
+  if(!attempts){
+    return "0%";
+  }
   return (Math.trunc((matches / attempts) * 100)) + "%";
+}
+
+function resetGame(){
+  attempts = 0;
+  matches = 0;
+  gamesPlayed++;
+  displayStats();
+  resetCards();
+  modal.classList.add("hidden");
+}
+
+function resetCards(){
+  var hiddenCards = document.querySelectorAll(".card-back");
+  for(var cardIndex = 0; cardIndex < hiddenCards.length; cardIndex++){
+    hiddenCards[cardIndex].classList.remove("hidden");
+  }
 }
