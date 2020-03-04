@@ -77,11 +77,6 @@ function applyCardFronts(){
   })
 }
 
-{/* <div class="col-2 card">
-  <div class="card-front css-logo"></div>
-  <div class="card-back"></div>
-</div> */}
-
 function handleClick(event) {
   var cardClicked = event.target;
 
