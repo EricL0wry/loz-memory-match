@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", initialStart);
 
 var cards = [
-  "css-logo",
-  "docker-logo",
-  "gitHub-logo",
-  "html-logo",
-  "js-logo",
-  "mysql-logo",
-  "node-logo",
-  "php-logo",
-  "react-logo",
-  "css-logo",
-  "docker-logo",
-  "gitHub-logo",
-  "html-logo",
-  "js-logo",
-  "mysql-logo",
-  "node-logo",
-  "php-logo",
-  "react-logo"
+  "agahnim",
+  "eyegore",
+  "ganon",
+  "gibdo",
+  "link",
+  "stalfos",
+  "sword-soldier",
+  "uncle",
+  "zelda",
+  "agahnim",
+  "eyegore",
+  "ganon",
+  "gibdo",
+  "link",
+  "stalfos",
+  "sword-soldier",
+  "uncle",
+  "zelda"
 ];
 
 var firstCardClicked;

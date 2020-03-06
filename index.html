@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memory Match</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/grid.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -16,32 +17,21 @@
   </div>
   <div class="container">
     <div class="row" id="header">
-      <header>
-        <h1>LFZ Memory Match</h1>
-      </header>
+      <div class="logo"></div>
     </div>
     <div class="row" id="gameboard">
       <aside class="col-2">
-        <div>
-          <h3>Stats</h3>
-        </div>
-        <div>
-          <h3>Games Played</h3>
-        </div>
-        <div>
-          <h3 id="games">0</h3>
-        </div>
-        <div>
-          <h3>Attempts</h3>
-        </div>
-        <div>
+        <div class="life-container">
+          <h3>-LIFE-</h3>
           <h3 id="attempts">0</h3>
         </div>
-        <div>
+        <div class="accuracy-container">
           <h3>Accuracy</h3>
-        </div>
-        <div>
           <h3 id="accuracy">0</h3>
+        </div>
+        <div class="games-container">
+          <h3>Games Played</h3>
+          <h3 id="games">0</h3>
         </div>
       </aside>
       <main class="col-10" id="gameCards">

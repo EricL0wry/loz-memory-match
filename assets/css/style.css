@@ -1,6 +1,6 @@
 body {
   height: 97vh;
-  background-image: url(../images/lfz-background.jpg);
+  background-image: url(../images/lost-woods.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -25,12 +25,18 @@ aside > div {
   align-items: center;
   flex-basis: 12%;
   width: 85%;
-  background-color: #87ceeb;
 }
 
 h3 {
   margin: 0;
   font-size: 1.5rem;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  color: white;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #100170;
+  text-shadow: 0 0 2px #100170;
 }
 
 main {
@@ -41,73 +47,112 @@ main {
   align-items: center;
 }
 
+.logo {
+  /* font-family: 'Press Start 2P', cursive;
+  font-weight: 100; */
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.logo {
+  /* font-family: 'Press Start 2P', cursive;
+  font-weight: 100; */
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.life-container,
+.accuracy-container,
+.games-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .card {
   height: 28%;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .card-front, .card-back {
   height: 100%;
-  width: 100%;
+  width: 90%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
+  border-radius: 10px;
+  border: 5px ridge #e3ad07;
 }
 
 .card-back {
-  background-image: url(../images/lfz-card.jpg);
+  background-image: url(../images/triforce.png);
+  background-color: /*#8492de*/ #2d3336;
+  background-size: 50%;
 }
 
-.css-logo {
-  background-image: url(../images/css-logo.png);
+.agahnim {
+  background-image: url(../images/agahnim.png);
+  background-size: 45%;
+  background-color: #e8c070;
 }
 
-.docker-logo {
-  background-image: url(../images/docker-logo.jpg);
+.eyegore {
+  background-image: url(../images/eyegore.png);
+  background-size: 45%;
+  background-color: #907a2a;
 }
 
-.gitHub-logo {
-  background-image: url(../images/gitHub-logo.png);
+.ganon {
+  background-image: url(../images/ganon.png);
+  background-size: 70%;
+  background-color: #b83010;
 }
 
-.html-logo {
-  background-image: url(../images/html-logo.png);
+.gibdo {
+  background-image: url(../images/gibdo.png);
+  background-size: 35%;
+  background-color: #f89849;
 }
 
-.js-logo {
-  background-image: url(../images/js-logo.png);
+.link {
+  background-image: url(../images/link.png);
+  background-size: 37%;
+  background-color: #41d870;
 }
 
-.mysql-logo {
-  background-image: url(../images/mysql-logo.jpg);
+.stalfos {
+  background-image: url(../images/stalfos.png);
+  background-size: 30%;
+  background-color: #506fc7;
 }
 
-.node-logo {
-  background-image: url(../images/node-logo.png);
+.sword-soldier {
+  background-image: url(../images/sword-soldier.png);
+  background-size: 40%;
+  background-color: #9d89ee;
 }
 
-.php-logo {
-  background-image: url(../images/php-logo.jpeg);
+.uncle {
+  background-image: url(../images/uncle.png);
+  background-size: 40%;
+  background-color: #f0d840;
 }
 
-.react-logo {
-  background-image: url(../images/react-logo.png);
-}
-
-#header {
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
-  height: 12%;
-}
-
-header > h1 {
-  margin: 0;
-}
-
-#gameboard {
-  height: 88%;
+.zelda {
+  background-image: url(../images/zelda.png);
+  background-size: 35%;
+  background-color: #e29292;
 }
 
 .modal-overlay {
@@ -146,4 +191,15 @@ header > h1 {
 
 .hidden {
   display: none;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12%;
+}
+
+#gameboard {
+  height: 88%;
 }
