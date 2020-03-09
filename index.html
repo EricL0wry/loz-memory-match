@@ -11,16 +11,22 @@
 <body>
   <div class="modal-overlay hidden">
     <div class="modal">
-      <h1>Congratulations! You WIN!!!</h1>
-      <button type="button" id="reset-button">PLAY AGAIN</button>
+      <h3 id="modal-message"></h3>
+      <div id="modal-image"></div>
+      <button type="button" id="reset-button"></button>
     </div>
   </div>
   <div class="container">
-    <!-- <div class="row" id="header">
-      <div class="logo"></div>
-    </div> -->
     <div class="row" id="gameboard">
       <aside class="col-2">
+        <div class="score-container">
+          <h3>-SCORE-</h3>
+          <h3 id="score">0</h3>
+        </div>
+        <div class="games-container">
+          <h3>-GAME-</h3>
+          <h3 id="games">1</h3>
+        </div>
         <div class="life-container">
           <h3>-LIFE-</h3>
           <div class="heart-container">
@@ -34,14 +40,6 @@
           <div class="accuracy-meter">
             <div class="accuracy"></div>
           </div>
-        </div>
-        <div class="score-container">
-          <h3>-SCORE-</h3>
-          <h3 id="score">0</h3>
-        </div>
-        <div class="games-container">
-          <h3>-GAME-</h3>
-          <h3 id="games">1</h3>
         </div>
         <div class="logo-container"></div>
       </aside>

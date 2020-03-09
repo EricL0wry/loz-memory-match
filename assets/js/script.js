@@ -36,15 +36,27 @@ var continuousMatches = 0;
 
 var mainContainer = document.getElementById("gameCards");
 var modal = document.querySelector(".modal-overlay");
+var modalMessage = document.getElementById("modal-message");
+var modalImage = document.getElementById("modal-image");
 var button = document.getElementById("reset-button");
 var heartContainer = document.querySelector(".heart-container");
 var magic = document.querySelector(".accuracy");
 
 function initialStart(){
+  addEventListeners();
+  createCards();
+  createHearts();
+  shuffleCardArray();
+  applyCardFronts();
+}
+
+function addEventListeners(){
   mainContainer.addEventListener("click", handleClick);
   button.addEventListener("click", resetGame);
+}
 
-  for(var cardNum = 1; cardNum <= 18; cardNum++){
+function createCards(){
+  for (var cardNum = 1; cardNum <= 18; cardNum++) {
     var card = document.createElement("div");
     card.className = "col-2 card";
 
@@ -58,9 +70,6 @@ function initialStart(){
     card.appendChild(cardBack);
     mainContainer.appendChild(card);
   }
-  createHearts();
-  shuffleCardArray();
-  applyCardFronts();
 }
 
 function createHearts(){
@@ -94,6 +103,7 @@ function shuffleCardArray(){
 
 function applyCardFronts(){
   var deck = document.querySelectorAll(".card-front");
+
   deck.forEach(function (card, index) {
     card.className = "card-front " + cards[index];
   })
@@ -194,6 +204,16 @@ function calculateScore(pts){
 }
 
 function endGameModal(result){
+  if(result === "win"){
+    modalMessage.textContent = "You have saved Hyrule! For now...";
+    modalImage.className = "modal-win-image";
+    button.textContent = "CONTINUE";
+  } else if (result === "fail"){
+    modalMessage.textContent = "-GAME OVER-";
+    modalImage.className = "modal-fail-image";
+    button.textContent = "RESTART";
+  }
+
   modal.classList.remove("hidden");
 }
 

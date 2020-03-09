@@ -19,7 +19,7 @@ aside {
   align-items: center;
 }
 
-h3 {
+aside h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
   font-family: 'Press Start 2P', cursive;
@@ -93,7 +93,6 @@ main {
 }
 
 .accuracy-container {
-  /* height: 100%; */
   flex-basis: 25%;
   align-items: center;
   justify-content: flex-start;
@@ -126,6 +125,11 @@ main {
   position: relative;
   display: flex;
   justify-content: center;
+  transition: all .2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.025);
 }
 
 .card-front, .card-back {
@@ -210,8 +214,9 @@ main {
 }
 
 .modal {
-  background-color: #87ceeb;
+  background-color: #2d3336;
   border-radius: 10px;
+  border: 5px ridge #e3ad07;
   width: 35%;
   height: 40%;
   display: flex;
@@ -220,17 +225,47 @@ main {
   align-items: center;
 }
 
-.modal > h1 {
-  font-size: 3rem;
+.modal > h3 {
+  font-size: 2rem;
   text-align: center;
   margin: 0;
   padding: 0 1rem;
+  font-family:'Press Start 2P', cursive;;
+  color: white;
+  text-shadow: 0 0 3px #100170;
 }
 
 .modal > button {
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: .5rem;
   border-radius: 5px;
+  border: none;
+  font-family: 'Press Start 2P', cursive;
+  transition: all .2s ease-in-out;
+  box-shadow: 0 0 3px #100170;
+  background-color: #8f6d04;
+}
+
+.modal > button:hover {
+  transform: scale(1.1);
+  background-color: #e3ad07;
+}
+
+.modal-win-image {
+  background-image: url(../images/link-w-triforce.png);
+  flex-basis: 40%;
+}
+
+.modal-fail-image {
+  background-image: url(../images/dead-link.png);
+  flex-basis: 25%;
+}
+
+#modal-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+    width: 30%;
 }
 
 #header {
