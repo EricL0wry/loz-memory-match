@@ -4,45 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memory Match</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/grid.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <div class="modal-overlay hidden">
     <div class="modal">
-      <h1>Congratulations! You WIN!!!</h1>
-      <button type="button" id="reset-button">PLAY AGAIN</button>
+      <h3 id="modal-message"></h3>
+      <div id="modal-image"></div>
+      <button type="button" id="reset-button"></button>
     </div>
   </div>
   <div class="container">
-    <div class="row" id="header">
-      <header>
-        <h1>LFZ Memory Match</h1>
-      </header>
-    </div>
     <div class="row" id="gameboard">
       <aside class="col-2">
-        <div>
-          <h3>Stats</h3>
+        <div class="score-container">
+          <h3>-SCORE-</h3>
+          <h3 id="score">0</h3>
         </div>
-        <div>
-          <h3>Games Played</h3>
+        <div class="games-container">
+          <h3>-GAME-</h3>
+          <h3 id="games">1</h3>
         </div>
-        <div>
-          <h3 id="games">0</h3>
+        <div class="life-container">
+          <h3>-LIFE-</h3>
+          <div class="heart-container">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+          </div>
         </div>
-        <div>
-          <h3>Attempts</h3>
+        <div class="accuracy-container">
+          <h3>-ACC-</h3>
+          <div class="accuracy-meter">
+            <div class="accuracy"></div>
+          </div>
         </div>
-        <div>
-          <h3 id="attempts">0</h3>
-        </div>
-        <div>
-          <h3>Accuracy</h3>
-        </div>
-        <div>
-          <h3 id="accuracy">0</h3>
-        </div>
+        <div class="logo-container"></div>
       </aside>
       <main class="col-10" id="gameCards">
       </main>
